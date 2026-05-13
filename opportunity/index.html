@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Opportunity | Ron Forrester &amp; Leslie Hocker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F5F0E8;--cream-dark:#E8E1D4;--cream-mid:#F0EBE0;--teal:#1A6B6A;--teal-light:#2A8A89;--teal-mist:rgba(26,107,106,.08);--gold:#C9A84C;--gold-light:#E0C070;--charcoal:#2C3E50;--charcoal-deep:#1a2530;--sage:#7DA47D;--sage-light:#9dbf9d;--ink:#1a1a1a;--mid:#4a5568}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.container{max-width:960px;margin:0 auto;padding:0 32px}
+.sl{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:block}
+.hero{background:var(--charcoal-deep);min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(26,107,106,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 20%,rgba(201,168,76,.10) 0%,transparent 55%)}
+.hnav{position:relative;z-index:10;padding:28px 48px;display:flex;justify-content:space-between;align-items:center}
+.hwm{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.hsl{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.4);padding:9px 20px;border-radius:2px;text-decoration:none;transition:background .2s,color .2s}
+.hsl:hover{background:var(--gold);color:var(--charcoal-deep)}
+.hbody{flex:1;display:flex;flex-direction:column;justify-content:center;padding:60px 48px 80px;max-width:880px;position:relative;z-index:5}
+.heb{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fu .8s .2s ease forwards}
+.hh1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6.5vw,76px);font-weight:300;line-height:1.1;color:#fff;margin-bottom:32px;opacity:0;animation:fu .9s .35s ease forwards}
+.hh1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hh1 strong{font-weight:600}
+.hdeck{font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.65);max-width:600px;margin-bottom:44px;opacity:0;animation:fu .9s .5s ease forwards}
+.hdeck span{color:rgba(255,255,255,.9);font-weight:500}
+.hctas{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fu .8s .65s ease forwards}
+.bg{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--charcoal-deep);padding:15px 30px;border-radius:2px;text-decoration:none;transition:background .2s}
+.bg:hover{background:var(--gold-light)}
+.bgh{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.25);padding:15px 30px;border-radius:2px;text-decoration:none;transition:border-color .2s,color .2s}
+.bgh:hover{border-color:rgba(255,255,255,.6);color:#fff}
+.pqs{background:var(--teal);padding:72px 48px;text-align:center}
+.pqt{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,34px);font-style:italic;color:#fff;max-width:760px;margin:0 auto 16px;line-height:1.6}
+.pqt em{color:var(--gold);font-style:normal}
+.pqa{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.ss{padding:96px 0}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.sn{font-family:'Cormorant Garamond',serif;font-size:150px;font-weight:300;line-height:.9;color:var(--cream-dark);letter-spacing:-.04em;margin-bottom:-16px}
+.sh2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,46px);font-weight:600;color:var(--charcoal);line-height:1.15;margin-bottom:24px}
+.sh2 em{color:var(--teal);font-style:italic}
+.sb p{font-size:15.5px;color:var(--mid);line-height:1.85;margin-bottom:18px}
+.sb strong{color:var(--charcoal);font-weight:600}
+.cal{background:var(--teal);border-radius:4px;padding:26px 28px;margin-top:28px}
+.cal p{font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;color:#fff;line-height:1.5;margin:0}
+.cal p em{color:var(--gold);font-style:normal}
+.tr{background:var(--teal);padding:72px 48px;text-align:center}
+.tri{max-width:620px;margin:0 auto}
+.tl{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.8vw,28px);font-weight:600;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);line-height:1.3}
+.tl.fin{border-bottom:none;color:var(--gold);font-style:italic}
+.ps{padding:96px 0}
+.pi{max-width:660px;margin-bottom:56px}
+.pi h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);font-weight:600;color:var(--charcoal);line-height:1.15;margin-bottom:18px}
+.pi h2 em{color:var(--teal);font-style:italic}
+.pi p{font-size:15.5px;color:var(--mid);line-height:1.85}
+.pc{display:grid;grid-template-columns:76px 1fr;margin-bottom:4px;background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06);transition:box-shadow .25s,transform .25s}
+.pc:hover{box-shadow:0 6px 28px rgba(0,0,0,.10);transform:translateY(-2px)}
+.pnb{background:var(--charcoal);display:flex;align-items:center;justify-content:center}
+.pn{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--gold)}
+.pb{padding:26px 30px}
+.pt{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--charcoal);margin-bottom:10px}
+.px{font-size:14px;color:var(--mid);line-height:1.8}
+.px p{margin-bottom:10px}
+.px p:last-child{margin-bottom:0}
+.px strong{color:var(--charcoal);font-weight:600}
+.pp{margin-top:12px;padding:10px 14px;background:var(--teal-mist);border-left:3px solid var(--teal);border-radius:0 3px 3px 0}
+.pp p{font-size:13px;color:var(--teal);font-style:italic;line-height:1.6;margin:0}
+.zs{background:var(--gold);padding:72px 48px;text-align:center}
+.zq{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.8vw,42px);font-style:italic;font-weight:400;color:var(--charcoal-deep);max-width:740px;margin:0 auto 18px;line-height:1.45}
+.za{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(26,37,48,.55)}
+.zn{margin-top:24px;font-size:14.5px;color:rgba(26,37,48,.7);max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.zn strong{color:var(--charcoal-deep)}
+.ws{background:var(--cream);padding:96px 0}
+.wg{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.wl{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;display:block}
+.wl.ron{color:var(--teal)}
+.wl.les{color:var(--sage)}
+.wn{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--charcoal);margin-bottom:4px}
+.wt{font-size:12px;color:var(--mid);margin-bottom:22px;font-style:italic;line-height:1.5}
+.wst{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:24px}
+.wsn{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;line-height:1}
+.wsn.g{color:var(--gold)}
+.wsn.t{color:var(--teal-light)}
+.wsn.sa{color:var(--sage-light)}
+.wsl{font-size:11px;color:var(--mid);line-height:1.4}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;background:rgba(26,107,106,.08);color:var(--teal);border:1px solid rgba(26,107,106,.2)}
+.wb{font-size:13.5px;color:var(--mid);line-height:1.85}
+.wb p{margin-bottom:12px}
+.wb p:last-child{margin-bottom:0}
+.wb strong{color:var(--charcoal)}
+.tog{background:#fff;border:1px solid var(--cream-dark);border-radius:6px;padding:30px 34px;margin-top:44px}
+.tog h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--teal);margin-bottom:14px}
+.tog p{font-size:14.5px;color:var(--mid);line-height:1.85;margin-bottom:12px}
+.tog p:last-child{margin-bottom:0}
+.tog strong{color:var(--charcoal)}
+.hs{padding:96px 0}
+.hg{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.hh2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,48px);font-weight:600;color:var(--charcoal);line-height:1.15;margin-bottom:26px}
+.hh2 em{color:var(--teal);font-style:italic}
+.hb p{font-size:15.5px;color:var(--mid);line-height:1.85;margin-bottom:18px}
+.hb strong{color:var(--charcoal);font-weight:600}
+.sq{background:var(--sage);border-radius:6px;padding:32px 32px 28px 40px;position:relative;overflow:hidden}
+.sq::before{content:'"';position:absolute;top:-8px;left:14px;font-family:'Cormorant Garamond',serif;font-size:80px;color:#fff;opacity:.25;line-height:1}
+.sq p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#fff;line-height:1.65;margin-bottom:12px;position:relative;z-index:2}
+.sqa{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);position:relative;z-index:2}
+.bel{background:var(--teal);border-radius:6px;padding:26px 30px;margin-top:14px}
+.bel p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#fff;line-height:1.55;margin:0}
+.bel p em{color:var(--gold-light);font-style:normal;font-weight:600}
+.scans{background:var(--cream-mid);padding:96px 0;position:relative;overflow:hidden}
+.scans::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(26,107,106,.07) 0%,transparent 70%);pointer-events:none}
+.scang{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.scanh2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);font-weight:600;color:var(--charcoal);line-height:1.15;margin-bottom:22px}
+.scanh2 em{color:var(--teal);font-style:italic}
+.scanbody p{font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:16px}
+.scanbody strong{color:var(--charcoal)}
+.sfeats{display:flex;flex-direction:column;gap:10px;margin:24px 0}
+.sf{display:flex;gap:12px;background:#fff;border:1px solid var(--cream-dark);border-radius:4px;padding:13px 15px;align-items:flex-start}
+.sfi{font-size:16px;flex-shrink:0;margin-top:1px}
+.sf strong{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:2px}
+.sf span{font-size:13px;color:var(--mid);line-height:1.5}
+.lqc{background:rgba(125,164,125,.1);border:1px solid rgba(125,164,125,.28);border-radius:6px;padding:16px 18px;margin-bottom:4px}
+.lql{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:7px}
+.lqt{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--charcoal);line-height:1.6;margin:0 0 6px}
+.lqa{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+.scancta{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--charcoal-deep);padding:15px 34px;border-radius:2px;text-decoration:none;margin-top:18px;transition:background .2s}
+.scancta:hover{background:var(--gold-light)}
+.scards{display:flex;flex-direction:column;gap:12px}
+.sc{background:#fff;border:1px solid var(--cream-dark);border-radius:6px;padding:20px 24px;border-left:4px solid var(--gold)}
+.scn{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:4px}
+.scl{font-size:13px;color:var(--mid);line-height:1.4}
+.sc.t{border-left-color:var(--teal)}
+.sc.t .scn{color:var(--teal)}
+.sc.sa{border-left-color:var(--sage)}
+.sc.sa .scn{color:var(--sage);font-size:32px}
+.sc.qt .scn{font-size:18px;color:var(--charcoal);line-height:1.5}
+.fc{padding:110px 0;text-align:center}
+.fc h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,58px);font-weight:600;color:var(--charcoal);line-height:1.15;margin-bottom:18px}
+.fc h2 em{color:var(--teal);font-style:italic}
+.fcsub{font-size:16px;color:var(--mid);max-width:520px;margin:0 auto 44px;line-height:1.75;font-weight:300}
+.fcbtns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.bcg{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--charcoal-deep);padding:16px 36px;border-radius:2px;text-decoration:none;transition:background .2s}
+.bcg:hover{background:var(--gold-light)}
+.bct{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);border:2px solid var(--teal);padding:14px 36px;border-radius:2px;text-decoration:none;transition:background .2s,color .2s}
+.bct:hover{background:var(--teal);color:#fff}
+.socs{display:flex;justify-content:center;gap:18px;font-size:13px;color:var(--mid)}
+.socs a{color:var(--teal);text-decoration:none;font-weight:600}
+footer{background:var(--charcoal);padding:38px 48px;text-align:center;border-top:3px solid var(--gold)}
+footer p{font-size:12px;color:rgba(255,255,255,.28);line-height:1.8;max-width:700px;margin:0 auto 6px}
+footer a{color:rgba(255,255,255,.38)}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:720px){.sg,.hg,.wg,.scang{grid-template-columns:1fr;gap:36px}.hnav,.hbody{padding-left:24px;padding-right:24px}.container{padding:0 20px}.pqs,.tr,.zs{padding:56px 24px}.ss,.ps,.hs,.scans,.fc{padding:64px 0}.pc{grid-template-columns:54px 1fr}footer{padding:28px 24px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <nav class="hnav">
+    <div class="hwm">Ron &amp; Leslie &middot; Global Legacy Team</div>
+    <a href="http://yourskinscan.com" target="_blank" class="hsl">Free Skin Scan &rarr;</a>
+  </nav>
+  <div class="hbody">
+    <span class="heb">The Opportunity &middot; Global Legacy Team</span>
+    <h1 class="hh1">You pay for success<br>with <em>time</em> or <em>money.</em><br><strong>Ron and Leslie paid with time.</strong></h1>
+    <p class="hdeck">Nearly 5 decades. A 3-peat history of #1. <span>One scan that changes every conversation.</span> The timing is right, right now &mdash; and Ron and Leslie know what timing looks like.</p>
+    <div class="hctas">
+      <a href="#pillars" class="bg">See the 5 Pillars</a>
+      <a href="http://yourskinscan.com" target="_blank" class="bgh">Take the Free Scan</a>
+    </div>
+  </div>
+</section>
+
+<div class="pqs">
+  <p class="pqt reveal">&ldquo;One right decision changes your <em>entire trajectory.</em><br>Guessing keeps you stuck in this one.<br>Delaying keeps you there forever.&rdquo;</p>
+  <p class="pqa reveal">&mdash; Ron Forrester, PharmD</p>
+</div>
+
+<section class="ss">
+  <div class="container">
+    <div class="sg reveal">
+      <div>
+        <span class="sl">Ron&rsquo;s Story</span>
+        <div class="sn">7</div>
+        <h2 class="sh2">The years he <em>refused to listen.</em></h2>
+      </div>
+      <div class="sb">
+        <p>Here&rsquo;s something Ron wishes someone had told him in high school: <strong>you either pay for success with time or money.</strong> Ron and Leslie paid with time. Not because it took years to actually work &mdash; once they really started, the math moved fast.</p>
+        <p>What took the time was everything before that. <strong>Seven years refusing to listen</strong> to information about a side business. Seven years of someone trying to get his attention.</p>
+        <p>What finally pushed him to look? Someone close to him saying: <em>&ldquo;Your kids don&rsquo;t even know you because you work so much.&rdquo;</em></p>
+        <p>That was the moment he stopped researching and started doing. He went to talk to the man who had tried to get him to listen for seven years &mdash; <strong>out of pure desperation.</strong> That shouldn&rsquo;t have been what it took.</p>
+        <p>Once he made the decision, he simply followed a system that other successful people had already put together &mdash; and had the same success as those people.</p>
+        <div class="cal"><p>Clue: <em>Anything you have done successfully in your life followed a system.</em></p></div>
+        <div style="margin-top:24px"><p>All the things Ron missed until he was 33 can never be recaptured. Their success &mdash; individually and collectively &mdash; came from their philosophy of helping other people get what they want. Everything they have built has been for the betterment of other people.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tr reveal">
+  <div class="tri">
+    <div class="tl">You don&rsquo;t need a crisis to start.</div>
+    <div class="tl">You don&rsquo;t need 7 years of guessing.</div>
+    <div class="tl">You don&rsquo;t need to do it alone.</div>
+    <div class="tl fin">One right decision changes everything that follows.</div>
+  </div>
+</div>
+
+<section class="ps" id="pillars">
+  <div class="container">
+    <div class="pi reveal">
+      <span class="sl">The Foundation</span>
+      <h2>It took <em>15 years</em> to put these 5 pillars together.</h2>
+      <p>Ron and Leslie have stood in front of rooms for many years telling people the timing was perfect. They now know they didn&rsquo;t always understand what real timing meant. Today, for the first time, all five pillars of a legacy company are in place &mdash; simultaneously. This is what that looks like.</p>
+    </div>
+    <div class="pc reveal">
+      <div class="pnb"><div class="pn">I</div></div>
+      <div class="pb">
+        <div class="pt">Timing in the Marketplace</div>
+        <div class="px">
+          <p>Real timing is when <strong>you don&rsquo;t have to teach the marketplace that the timing is right.</strong> For many years Ron and Leslie told rooms full of people that timing was perfect. They now admit they didn&rsquo;t always know what they were talking about.</p>
+          <p>Today is different. L&rsquo;Or&eacute;al, Chanel, and every major beauty brand have spent decades conditioning the marketplace: <em>be young, stay young.</em> They release a new product every three months &mdash; and people keep buying. They have conditioned the marketplace to want exactly what we have.</p>
+          <div class="pp"><p>The no-tox consumer &mdash; the person who wants results without fillers, needles, or a face that doesn&rsquo;t move &mdash; is now the majority. The marketplace is not just ready. It&rsquo;s asking.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="pc reveal">
+      <div class="pnb"><div class="pn">II</div></div>
+      <div class="pb">
+        <div class="pt">A Product That Cannot Be Copied</div>
+        <div class="px">
+          <p>You cannot go to the corner drugstore and buy this product. There are not 3,500 other companies selling it. <strong>It is unique. It must be unique.</strong> And our products are unique &mdash; market disruptors, ahead of the trends, with cutting edge science and technology.</p>
+          <p>The first product we came out with was a market disruptor. There were plenty of anti-aging night creams claiming results &mdash; but none delivering on the promise. Ours delivered in days. And the people around our customers saw it in their faces and asked: <em>&ldquo;What are you doing? How do I get that?&rdquo;</em></p>
+          <p><strong>And our just launched product is an even bigger market disruptor.</strong></p>
+          <div class="pp"><p>In our first year, we did something never done before &mdash; not even by the biggest skincare company in history: <strong>$100 million of product in one country with one product.</strong> The product networked for us. We didn&rsquo;t have enough representatives to sell $100 million &mdash; the product did the work.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="pc reveal">
+      <div class="pnb"><div class="pn">III</div></div>
+      <div class="pb">
+        <div class="pt">Administration That Knows Both Sides</div>
+        <div class="px">
+          <p>The administration must have experience in the field &mdash; to know what we need out here &mdash; and experience inside a major company, to understand what it takes to operate at scale.</p>
+          <p><strong>This is not a hobby. This is real big business.</strong> The admin must know both sides. We have that. Some of the best people who have ever been in this industry.</p>
+          <div class="pp"><p>When administration has lived the field, they build tools that actually work for people building businesses &mdash; not just tools that look good in a boardroom.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="pc reveal">
+      <div class="pnb"><div class="pn">IV</div></div>
+      <div class="pb">
+        <div class="pt">The Fourth Pillar &mdash; A Simple System</div>
+        <div class="px">
+          <p>You must have a simple system that people can learn in minutes and immediately use to deliver the opportunity or product into the marketplace. <strong>It took 25 years to build it down to this level of simplicity.</strong></p>
+          <p>Ron and Leslie can teach someone how to actually start their business in five minutes &mdash; because the system is that simple. As they grow, they learn the rest along the way. While they&rsquo;re already making money.</p>
+          <div class="pp"><p>The Intelli-SKIN AI scan is the system. 60 seconds. Free. The person sees their own data. Nobody argues with their own data. <strong>You don&rsquo;t sell. The scan sells. You just guide.</strong></p></div>
+        </div>
+      </div>
+    </div>
+    <div class="pc reveal">
+      <div class="pnb"><div class="pn">V</div></div>
+      <div class="pb">
+        <div class="pt">Leaders Who Can Teach the System</div>
+        <div class="px">
+          <p>You must have leaders in the field who can teach that simple system &mdash; who have done it, who can prove it, and who can be a genuine mentor to the people they bring in.</p>
+          <p>This is where Ron and Leslie excel. <strong>80+ combined years of teaching people how to be successful in this business.</strong> They&rsquo;ve helped thousands reach their dreams &mdash; different lifestyles, things they never thought possible.</p>
+          <div class="pp"><p>Ron and Leslie have been called &ldquo;the good guys&rdquo; in network marketing for decades &mdash; because they&rsquo;ve always put people first. They build by mentoring, never by recruiting and abandoning.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="zs reveal">
+  <p class="zq">&ldquo;If you help enough others get what they want,<br>then you can&rsquo;t help but get what you want.&rdquo;</p>
+  <p class="za">&mdash; Zig Ziglar &middot; Mentor to Ron Forrester since 1969</p>
+  <p class="zn">This is the foundational principle of relationship marketing &mdash; and the foundation of everything Ron and Leslie do. <strong>You are never successful on your own.</strong> You can only get where you want to go by helping others get to where they want to go.</p>
+</div>
+
+<section class="ws">
+  <div class="container">
+    <div style="margin-bottom:48px" class="reveal">
+      <span class="sl">Who You&rsquo;d Be Working With</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,48px);font-weight:600;color:var(--charcoal);line-height:1.15">Not a transaction.<br><em style="color:var(--teal);font-style:italic">A mentorship.</em></h2>
+    </div>
+    <div class="wg">
+      <div class="reveal">
+        <span class="wl ron">Ron Forrester</span>
+        <div class="wn">Ron Forrester</div>
+        <div class="wt">PharmD &middot; #87 World Transformational Leader &middot; Nearly 5 Decades in Network Marketing</div>
+        <div class="wst">
+          <div><div class="wsn g">3&times;</div><div class="wsl">Times #1<br>in a company</div></div>
+          <div><div class="wsn t">46</div><div class="wsl">Years in<br>the industry</div></div>
+          <div><div class="wsn sa">79</div><div class="wsl">Years old &amp;<br>still building</div></div>
+        </div>
+        <div class="chips">
+          <span class="chip">Zig Ziglar &middot; 1969</span>
+          <span class="chip">Paul J. Meyer</span>
+          <span class="chip">Maxwell #87</span>
+        </div>
+        <div class="wb">
+          <p>Ron started spare time in 1980 as he worked his full time job as a Pharmacist. He built his first organization to an income that was multiples of his pharmacist salary &mdash; and retired from corporate America at 36. <strong>Forever.</strong></p>
+          <p>At 19 he met Paul J. Meyer. Through Meyer, he met Zig Ziglar in Charlotte, NC in 1969 &mdash; selling waterless cookware. Both men became mentors and shaped the philosophy Ron has taught for over four decades.</p>
+          <p>Ron has built multi-million dollar organizations across the US, Europe, and Asia. He has never seen the five pillars align the way they align right now.</p>
+          <p style="font-style:italic;color:var(--mid);border-left:3px solid var(--teal);padding-left:14px;">&ldquo;Life is a participation sport. And there are no practice games! You are in the game 24/7 either swinging for the fence or watching someone else win! Only you can put yourself in the game! Me? I chose to play full out.&rdquo;</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="wl les">Leslie Hocker</span>
+        <div class="wn">Leslie Hocker</div>
+        <div class="wt">NLP Trainer &middot; Maxwell Top 1,000 &middot; Division I Swimmer &middot; Top 100 Earner &middot; ANMP Board of Directors</div>
+        <div class="wst">
+          <div><div class="wsn g">10&times;</div><div class="wsl">Results when<br>they partnered</div></div>
+          <div><div class="wsn t" style="font-size:20px;line-height:1.2">Top<br>100</div><div class="wsl">Relationship<br>Marketing earner</div></div>
+          <div><div class="wsn sa" style="font-size:14px;line-height:1.3">ANMP<br>Board</div><div class="wsl">Elected by<br>top performers</div></div>
+        </div>
+        <div class="chips">
+          <span class="chip">Paul J. Meyer &middot; 10 Yrs</span>
+          <span class="chip">Tony Robbins</span>
+          <span class="chip">Jeff Olson</span>
+        </div>
+        <div class="wb">
+          <p>Leslie was one of the first female executives in the oil industry. In 1983 she opened <strong>the first Pilates studio in Houston</strong> &mdash; which closed not because of Leslie, but because the marketplace wasn&rsquo;t ready. Nearly 20 years later, Pilates became a cultural institution. Leslie understood timing before she had the language for it.</p>
+          <p>In 1984 she entered network marketing, leading to meeting Tony Robbins when he joined the same company. From 1986 she worked with The Robbins Companies for over three years. Through those associations she met Jeff Olson, author of <em>The Slight Edge</em>, and was mentored for <strong>nearly 10 years by billionaire Paul J. Meyer</strong>.</p>
+          <p>A top earner in her own right &mdash; in the top 100 of earners in Relationship Marketing. Elected to the Board of Directors of the Association of Network Marketing Professionals, a singular honor voted on by the top performers in the industry. A major performer in every endeavor she enters. When she and Ron partnered, it 10X&rsquo;d the results for both of them.</p>
+          <div style="margin-top:16px;background:rgba(125,164,125,.1);border:1px solid rgba(125,164,125,.28);border-radius:6px;padding:14px 16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:6px">&#10022; Leslie Hocker</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--charcoal);line-height:1.6;margin:0 0 6px">&ldquo;I love helping people and making a difference. What drives me is helping others be able to create memories and have more fun and more choices in life. I could talk about that all day long.&rdquo;</p>
+            <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)">&mdash; Leslie Hocker &middot; Leaving Nothing to Chance Podcast</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tog reveal">
+      <h3>Together: 80+ Years. Thousands Helped.</h3>
+      <p>Ron and Leslie have individually and together built multi-million dollar sales and marketing organizations across the United States, Europe, and Asia. Nominated to John C. Maxwell&rsquo;s 1,000 Most Influential Global Leaders &mdash; both of them &mdash; through a fully organic, third-party process. Not bought. Earned.</p>
+      <p>They have helped over 50 people earn bonuses ranging from $50,000 to $375,000 &mdash; over and above regular commission income. And thousands more change their life, their zipcode, and some even their country. Their Facebook community, <strong>Ron and Leslie &mdash; Network Marketing Pros</strong>, has over 43,000 members. Featured on Eric Worre&rsquo;s Go Pro podcast, Simon Chan&rsquo;s MLM Nation, John Solleder&rsquo;s Leaving Nothing to Chance, K.C. Townes, Tom Chenault&rsquo;s Home Based Business Radio, and many more.</p>
+      <p>Their success &mdash; individually and collectively &mdash; came from their philosophy of helping other people get what they want. Everything they have built has been for the betterment of other people. <strong>They will work with you. They will believe in you until you can believe in yourself.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="hs">
+  <div class="container">
+    <div class="hg">
+      <div class="reveal">
+        <span class="sl">The Philosophy</span>
+        <h2 class="hh2">Standing on the<br><em>shoulders of giants.</em></h2>
+        <div class="hb">
+          <p>Most people who get on stage talk about what they did. I did this. I achieved that. And that&rsquo;s not wrong &mdash; but it misses the whole truth.</p>
+          <p>Nobody gets there alone. <strong>Ron and Leslie don&rsquo;t get on stage and say I did. They say: we are simply representing all the people who made this possible.</strong></p>
+          <p>And while all those people are pushing them up &mdash; Ron and Leslie are reaching down and pulling others up. That&rsquo;s the whole model. The only model that builds a legacy.</p>
+          <p>The people who grab hold and work &mdash; those are the ones who build something they can will to their children and grandchildren.</p>
+        </div>
+      </div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:14px">
+        <div class="sq">
+          <p>&ldquo;We are not up here by ourselves. We are essentially standing on the shoulders of giants &mdash; simply representing them as we stand here.</p>
+          <p>And we really want you up here with us.&rdquo;</p>
+          <div class="sqa">&mdash; Ron Forrester &middot; From Stage</div>
+        </div>
+        <div class="bel">
+          <p>&ldquo;We will work with you. We will <em>believe in you</em> until you can believe in yourself.&rdquo;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scans">
+  <div class="container">
+    <div class="scang">
+      <div class="reveal">
+        <span class="sl">The Tool That Changes Everything</span>
+        <h2 class="scanh2">The scan <em>is</em><br>the opportunity.</h2>
+        <div class="scanbody">
+          <p>Before this, demonstrating a skincare product meant before/after photos that people questioned, handing out samples and waiting days to get feedback.</p>
+          <p>Now: the person scans their own face. Sees their own 15-point skin profile. Gets their own data. <strong>Nobody argues with their own data.</strong></p>
+          <p>We have the first ever clinically proven <strong>no-toxins, no-needles, no doctor&rsquo;s office visit, no waiting room, in your own home in less than 3 minutes</strong> anti-aging solution. And it speaks directly to the market of today.</p>
+          <p>The simplicity of the scan is exactly what makes this the right moment. The scan does the selling. <strong>You just guide.</strong></p>
+        </div>
+        <div class="sfeats">
+          <div class="sf"><div class="sfi">&#9879;</div><div><strong>Clinically Proven</strong><span>Independent third-party trials. 1,223% increase in collagen production in 90 days. No needles. No toxins. No office visit.</span></div></div>
+          <div class="sf"><div class="sfi">&#128241;</div><div><strong>60-Second AI Scan</strong><span>15 skin concerns assessed. 95% accuracy. Free. $150 value. Done on your phone, in your home, in under a minute.</span></div></div>
+        </div>
+        <a href="http://yourskinscan.com" target="_blank" class="scancta">Take the Free Scan &rarr; yourskinscan.com</a>
+      </div>
+      <div class="scards reveal">
+        <div class="sc"><div class="scn">1,223%</div><div class="scl">Increase in collagen production in 90 days &mdash; clinically proven in independent third-party trials</div></div>
+        <div class="sc t"><div class="scn">$100M</div><div class="scl">In sales &mdash; one country, one product, year one. Never done before in the history of skincare.</div></div>
+        <div class="sc sa"><div class="scn">60 sec</div><div class="scl">Is all it takes. 15 concerns. 95% accuracy. Free. No appointment. No obligation.</div></div>
+        <div class="sc qt"><div class="scn">&ldquo;Nobody argues<br>with their own data.&rdquo;</div><div class="scl">&mdash; Ron Forrester, PharmD</div><div class="sc" style="border-left-color:var(--teal);background:var(--cream)">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">&#128279; It Sells Itself</div>
+          <div style="font-size:14px;color:var(--mid);line-height:1.7">The most compelling conversation starter Ron and Leslie have seen in nearly 5 decades. Their data, their result, their decision to ask more.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fc">
+  <div class="container reveal">
+    <span class="sl" style="display:block;text-align:center">Ready to Look Closer?</span>
+    <h2>Stay with us &mdash; we&rsquo;ll show you<br><em>why the timing is right, right now.</em></h2>
+    <p class="fcsub">The version of you that looks closer is waiting. Start with the scan &mdash; it&rsquo;s free, it takes 60 seconds, and it&rsquo;s the most honest conversation starter in this industry.</p>
+    <div class="fcbtns">
+      <a href="http://yourskinscan.com" target="_blank" class="bcg">Start with the Free Scan</a>
+      <a href="https://lesliehocker.com" target="_blank" class="bct">General Overview</a>
+    </div>
+    <div class="socs">
+      <span>Find us:</span>
+      <a href="https://instagram.com/the.skin.pharmacist" target="_blank">@the.skin.pharmacist</a>
+      <a href="https://instagram.com/leslie_hocker" target="_blank">@leslie_hocker</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Ron Forrester, PharmD &middot; Leslie Hocker &middot; The Global Legacy Team &middot; Youthful Aging Movement</p>
+  <p>These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+  <p>Individual results vary. Income depends on individual effort, skill, and market conditions. This is not a guarantee of income.</p>
+  <p style="margin-top:12px">
+    <a href="http://yourskinscan.com" target="_blank">yourskinscan.com</a> &nbsp;&middot;&nbsp;
+    <a href="https://lesliehocker.com" target="_blank">lesliehocker.com</a> &nbsp;&middot;&nbsp;
+    <a href="https://coachronforrester.com" target="_blank">coachronforrester.com</a>
+  </p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.querySelectorAll('.pc').forEach((c,i) => { c.style.transitionDelay = (i*0.07)+'s'; });
+</script>
+</body>
+</html>
