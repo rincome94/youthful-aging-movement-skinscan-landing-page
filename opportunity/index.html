@@ -399,6 +399,80 @@
       color:var(--charcoal);font-size:.84rem;font-weight:700;
     }
 
+    /* ── Lip Volumizing Treatment Section ── */
+    .lip-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:12px;
+    }
+    @media(min-width:760px){
+      .lip-grid{grid-template-columns:repeat(4,1fr);gap:16px}
+    }
+    .lip-card{
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--soft-shadow);
+      background:var(--white);
+      transition:transform .22s ease,box-shadow .22s ease;
+    }
+    .lip-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .lip-img-wrap{
+      position:relative;
+      width:100%;
+      aspect-ratio:1/1;
+      overflow:hidden;
+    }
+    .lip-img-wrap img{
+      width:100%;height:100%;
+      display:block;
+      object-fit:cover;
+    }
+    .lip-label{
+      position:absolute;
+      bottom:0;left:0;right:0;
+      text-align:center;
+      padding:7px 0;
+      font-size:.72rem;font-weight:800;
+      letter-spacing:.10em;text-transform:uppercase;
+      background:rgba(26,107,106,.80);
+      color:var(--white);
+      backdrop-filter:blur(8px);
+    }
+    .lip-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:4px;
+    }
+    .lip-stat-pill{
+      padding:6px 14px;
+      border-radius:999px;
+      background:rgba(26,107,106,.10);
+      color:var(--teal);
+      font-size:.80rem;
+      font-weight:700;
+      letter-spacing:.04em;
+    }
+    .lip-cta-row{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      margin-top:32px;
+    }
+    .lip-cta-row .micro-note{text-align:center;margin-top:-4px}
+
+    /* ── Mission Tagline ── */
+    .mission-line{
+      font-family:'Cormorant Garamond',Georgia,serif;
+      font-weight:700;
+      font-size:clamp(1.1rem,3vw,1.5rem);
+      color:var(--teal);
+      letter-spacing:-.01em;
+      line-height:1.3;
+    }
+    .mission-line.light{color:var(--gold-light)}
 
     /* ── Privacy Policy Drawer ── */
     .privacy-overlay{
@@ -590,6 +664,14 @@
               "@type": "Answer",
               "text": "Ron or Leslie personally follows up within 24 hours — on your schedule, in your time zone, without pressure. They walk you through the scan system, the product, the income structure, and the 5 factors. You also experience the Intelli-SKIN scan firsthand for free. Then you decide on your terms. No hard close. No deadlines. No pressure."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Who would be helping me achieve success?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Built on people, purpose, and proven success. Leslie and Ron Forrester have spent decades helping people create greater freedom, stronger financial confidence, and more time with the people they love. What started as a passion for helping others has grown into a community where encouragement, mentorship, and shared success are at the heart of everything they do. Life's greatest rewards aren't achieved alone. They're built together."
+            }
           }
         ]
       }
@@ -634,6 +716,7 @@
               <a class="btn" href="#system">See How the System Works</a>
               <span class="micro-note"><strong>No experience required</strong><br>No large investment · System already built for you</span>
             </div>
+            <p class="mission-line" style="margin-top:18px">Helping People Thrive At Every Stage Of Life</p>
           </div>
 
           <aside aria-label="Leslie Hocker Intelli-SKIN scan result">
@@ -740,7 +823,20 @@
             <span class="eyebrow">Is This You?</span>
             <h2 id="fit-title">Built for Entrepreneurial-Minded<br>People Navigating the New Economy</h2>
             <p>
-              This is for people who want income that works around their life — not the other way around. No 9-to-5. No ceiling. No asking permission. If any of the following sounds like you, keep reading.
+              This is for people who want income that works around their life — not the other way around. No 9-to-5. No ceiling. No asking permission. If any of the following sounds like you, keep reading. And if earning an extra $500 to $2,000 a month would make it possible for you to have:
+            </p>
+            <div class="five-factors">
+              <div class="five-factors-label">An Extra $500 to $2,000 a Month Could Mean</div>
+              <ul>
+                <li>A little less stress</li>
+                <li>A little more freedom</li>
+                <li>More choices</li>
+                <li>More experiences</li>
+                <li>More time doing what matters most</li>
+              </ul>
+            </div>
+            <p>
+              Whether you're looking for a side income, a future business, or simply a community of growth-minded people, you'll be surrounded by mentors who genuinely want to see you win.
             </p>
           </div>
           <div class="audience-grid">
@@ -806,11 +902,12 @@
           <!-- BOTTOM ROW — bio card beside 5-factor card -->
           <div class="split">
             <div class="quote-card">
+              <h3 style="color:var(--teal);margin-bottom:12px">Built on People, Purpose &amp; Proven Success</h3>
               <p>
-                We are Leslie Hocker and Ron Forrester — active builders with a 3-peat history of successfully helping others reach their dream lifestyles. Ron is a PharmD and John Maxwell-certified, ranked #87 among thousands of World Transformational Leaders. Leslie is Maxwell Top 1,000, NLP certified through Tony Robbins, and her biological age has been independently tested at 43. We didn't retire. We chose to work this particular business because the science, the system, and the timing are unlike anything we've seen in 46 years in this industry.
+                We're Leslie and Ron Forrester. For decades, we've helped people create greater freedom, stronger financial confidence, and more time with the people they love. Backed by a 3-peat history of guiding others to their dream lifestyles, John Maxwell leadership certifications, and 80+ years of combined experience, what started as a passion for helping others has grown into a community where encouragement, mentorship, and shared success are at the heart of everything we do.
               </p>
               <p style="margin-top:14px">
-                Industry leaders call us "the good guys." No hype. No pressure. A real system, real science, and a team that's been here before — and won.
+                Industry leaders call us "the good guys." No hype. No pressure. Because life's greatest rewards aren't achieved alone. They're built together.
               </p>
               <div class="quote-sig">
                 <div class="quote-avatar"></div>
@@ -818,6 +915,9 @@
                   <div class="quote-name">Leslie Hocker &amp; Ron Forrester</div>
                   <div class="quote-title">Global Legacy Team · Youthful Aging Movement</div>
                 </div>
+              </div>
+              <div style="margin-top:20px;text-align:center">
+                <a class="btn" href="#optin">Let's Build This Together →</a>
               </div>
             </div>
             <div class="card" style="padding:28px">
@@ -863,6 +963,65 @@
           <p style="margin-top:28px;text-align:center;color:var(--muted);font-size:.92rem;line-height:1.7;max-width:680px;margin-left:auto;margin-right:auto">
             Clinically proven to increase collagen production by <strong style="color:var(--teal)">1,223% in 90 days</strong> — verified by independent third-party trials. Individual results vary.
           </p>
+        </div>
+      </section>
+
+      <!-- LIP VOLUMIZING TREATMENT -->
+      <section class="light-section" aria-labelledby="lip-title" id="lip-elixir">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">New · Lip Volumizing Treatment</span>
+            <h2 id="lip-title">What If Your Lips Could Regain Their Volume, Color, and Hydration... Naturally?</h2>
+            <p>Women are spending billions on lip injections every year. We have biological beauty, naturally. Lip Volumizing Treatment helps support rebuilding your lips' natural structure from within, with no needles and no downtime. It's the newest addition to the product line, giving you one more door to open in every scan conversation.</p>
+            <div class="lip-stats">
+              <span class="lip-stat-pill">100% Saw Visible Results</span>
+              <span class="lip-stat-pill">Independent Trial</span>
+              <span class="lip-stat-pill">No Needles Required</span>
+            </div>
+          </div>
+
+          <div class="lip-grid">
+
+            <!-- Lip Result 1 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="/opportunity/images/lip-result-1.jpg" alt="Before and after — lip volume, color, and texture results, woman in her 60s" loading="lazy" />
+                <div class="lip-label">Before &amp; After</div>
+              </div>
+            </div>
+
+            <!-- Lip Result 2 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="/opportunity/images/lip-result-2.jpg" alt="Before and after — lip fullness and definition results, woman in her 30s" loading="lazy" />
+                <div class="lip-label">Before &amp; After</div>
+              </div>
+            </div>
+
+            <!-- Lip Result 3 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="/opportunity/images/lip-result-3.jpg" alt="Before and after — lip line smoothing and definition results, profile view" loading="lazy" />
+                <div class="lip-label">Before &amp; After</div>
+              </div>
+            </div>
+
+            <!-- Lip Result 4 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="/opportunity/images/lip-result-4.jpg" alt="Before and after — lip volume and smoothness results, profile view" loading="lazy" />
+              </div>
+            </div>
+
+          </div>
+
+          <p style="margin-top:28px;text-align:center;color:var(--muted);font-size:.78rem;font-style:italic">Individual results may vary. Before-and-after photos represent real users of the product. Results achieved with consistent use.</p>
+
+          <div class="lip-cta-row">
+            <a class="btn" href="http://yourskinscan.com/" target="_blank" rel="noopener">Get My Free Scan</a>
+            <span class="micro-note">Free · 60 seconds · $150 value · No obligation</span>
+            <a class="btn dark" href="http://beautifullips.shop" target="_blank" rel="noopener">Shop Our Exclusive Elixir →</a>
+          </div>
         </div>
       </section>
 
@@ -941,6 +1100,11 @@
               <summary>What happens after I request more information?</summary>
               <p>Ron or Leslie personally follows up within <strong>24 hours</strong> — on your schedule, in your time zone, without pressure. They walk you through the scan system, the product, the income structure, and the 5 factors. You experience the scan firsthand, for free. Then you decide on your terms. No hard close. No deadlines. No pressure.</p>
             </details>
+            <details>
+              <summary>Who would be helping me achieve success?</summary>
+              <p><strong>Built on People, Purpose &amp; Proven Success.</strong> We're Leslie and Ron Forrester. For decades, we've helped people create greater freedom, stronger financial confidence, and more time with the people they love. What started as a passion for helping others has grown into a community where encouragement, mentorship, and shared success are at the heart of everything we do. Because life's greatest rewards aren't achieved alone. They're built together.</p>
+              <p style="margin-top:10px"><strong>Built on People, Purpose &amp; Proven Success.</strong> We're Leslie and Ron Forrester. For decades, we've helped people create greater freedom, stronger financial confidence, and more time with the people they love. What started as a passion for helping others has grown into a community where encouragement, mentorship, and shared success are at the heart of everything we do. Because life's greatest rewards aren't achieved alone. They're built together.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -952,6 +1116,7 @@
           <div style="max-width:680px;margin:0 auto;text-align:center;margin-bottom:28px">
             <span class="eyebrow" style="margin-bottom:18px;display:inline-flex">Ready to Learn More?</span>
             <h2 style="font-size:clamp(1.6rem,4vw,2.6rem);margin:16px 0 10px;color:var(--charcoal)">Take the First Step — No Obligation</h2>
+            <p class="mission-line" style="margin:4px 0 12px">Helping People Thrive At Every Stage Of Life</p>
             <p style="color:var(--muted);font-size:1rem;line-height:1.7;max-width:520px;margin:0 auto">
               Enter your name and email below. We'll personally follow up within 24 hours — on your schedule, no pressure, no hype. Just a real conversation about whether this is the right fit for you.
             </p>
@@ -966,6 +1131,7 @@
         <div class="container">
           <div class="final-box">
             <span class="eyebrow light">The Legacy Opportunity</span>
+            <p class="mission-line light" style="margin-top:14px">Helping People Thrive At Every Stage Of Life</p>
             <h2 id="final-title">
               Ask me, and I'll show you the 5 Pillars that no other company I am aware of has — that make this opportunity possible and allow you to will the business on to your children and grandchildren as a Legacy you created.
             </h2>
