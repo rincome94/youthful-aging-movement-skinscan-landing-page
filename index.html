@@ -550,6 +550,61 @@
       .ba-grid{grid-template-columns:repeat(3,1fr)}
     }
 
+    /* ── Lip Rebuilding Elixir Section ── */
+    .lip-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:12px;
+    }
+    @media(min-width:760px){
+      .lip-grid{grid-template-columns:repeat(4,1fr);gap:16px}
+    }
+    .lip-card{
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--soft-shadow);
+      background:var(--white);
+      transition:transform .22s ease,box-shadow .22s ease;
+    }
+    .lip-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .lip-img-wrap{
+      position:relative;
+      width:100%;
+      aspect-ratio:1/1;
+      overflow:hidden;
+    }
+    .lip-img-wrap img{
+      width:100%;height:100%;
+      display:block;
+      object-fit:cover;
+    }
+    .lip-label{
+      position:absolute;
+      bottom:0;left:0;right:0;
+      text-align:center;
+      padding:7px 0;
+      font-size:.72rem;font-weight:800;
+      letter-spacing:.10em;text-transform:uppercase;
+      background:rgba(26,107,106,.80);
+      color:var(--white);
+      backdrop-filter:blur(8px);
+    }
+    .lip-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:4px;
+    }
+    .lip-cta-row{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      margin-top:32px;
+    }
+    .lip-cta-row .micro-note{text-align:center;margin-top:-4px}
+
     /* Disclaimer */
     .disclaimer{
       text-align:center;padding:24px 0 48px;
@@ -945,6 +1000,10 @@
             <h1 id="hero-title">
               Revolutionary<br>Natural Filler —<br><em>No Needles</em>
             </h1>
+            <h2 style="margin-top:18px">Age Less. Live More.</h2>
+            <p class="lead">
+              What if looking younger was only the beginning? Imagine feeling more confident in photos, more energized in conversations, and more excited about the future staring back at you in the mirror. That's why we're passionate about sharing innovations that help people age with confidence, vitality, and joy, without needles, downtime, or complicated routines. Because youthful living isn't about chasing a number. It's about feeling like yourself again.
+            </p>
             <p class="lead">
               Our innovative, at-home topical Natural Filler Serum/Elixir offers a safe, painless, and cost-effective alternative to injectables. Clinically proven. AI-verified. Your face, your choice — on your terms.
             </p>
@@ -1323,14 +1382,73 @@
         </div>
       </section>
 
+      <!-- LIP REBUILDING ELIXIR -->
+      <section class="ba-section" aria-labelledby="lip-title" id="lip-elixir">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">New · Lip Volumizing Treatment</span>
+            <h2 id="lip-title">What If Your Lips Could Regain Their Volume, Color, and Hydration... Naturally?</h2>
+            <p>Women are spending billions on lip injections every year. We have biological beauty, naturally. Lip Volumizing Treatment helps support rebuilding your lips' natural structure from within, with no needles and no downtime. It's the lip companion to the Natural Filler Serum/Elixir above, completing your face-and-lip routine.</p>
+            <div class="lip-stats">
+              <span class="scan-stat-pill">100% Saw Visible Results</span>
+              <span class="scan-stat-pill">Independent Trial</span>
+              <span class="scan-stat-pill">No Needles Required</span>
+            </div>
+          </div>
+
+          <div class="lip-grid">
+
+            <!-- Lip Result 1 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="./images/lip-result-1.jpg" alt="Before and after — lip volume, color, and texture results, woman in her 60s" loading="lazy" />
+                <div class="lip-label">Before &amp; After</div>
+              </div>
+            </div>
+
+            <!-- Lip Result 2 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="./images/lip-result-2.jpg" alt="Before and after — lip fullness and definition results, woman in her 30s" loading="lazy" />
+                <div class="lip-label">Before &amp; After</div>
+              </div>
+            </div>
+
+            <!-- Lip Result 3 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="./images/lip-result-3.jpg" alt="Before and after — lip line smoothing and definition results, profile view" loading="lazy" />
+                <div class="lip-label">Before &amp; After</div>
+              </div>
+            </div>
+
+            <!-- Lip Result 4 -->
+            <div class="lip-card">
+              <div class="lip-img-wrap">
+                <img src="./images/lip-result-4.jpg" alt="Before and after — lip volume and smoothness results, profile view" loading="lazy" />
+              </div>
+            </div>
+
+          </div>
+
+          <p class="ba-disclaimer">Individual results may vary. Before-and-after photos represent real users of the product. Results achieved with consistent use.</p>
+
+          <div class="lip-cta-row">
+            <a class="btn btn-gold" href="http://yourskinscan.com/" target="_blank" rel="noopener">Get My Free Scan</a>
+            <span class="micro-note">Free · 60 seconds · $150 value · No obligation</span>
+            <a class="btn" href="http://beautifullips.shop" target="_blank" rel="noopener">Shop Our Exclusive Elixir →</a>
+          </div>
+        </div>
+      </section>
+
       <!-- YOUR GUIDES -->
       <section aria-labelledby="relationship-title">
         <div class="container">
           <div class="section-head">
             <span class="eyebrow">Your Guides</span>
-            <h2 id="relationship-title">Built by Success —<br>Not Just Science</h2>
+            <h2 id="relationship-title">Built on People, Purpose &amp; Proven Success</h2>
             <p>
-              We're Leslie and Ron Forrester — active builders with a 3-peat history of successfully helping others reach their dream lifestyles. We didn't find this product. We chose it because the science demanded our attention. Leslie's biological age has been independently tested at 43. She uses this every day. That's not a claim. That's the story we want you to have for yourself.
+              We're Leslie and Ron Forrester. For decades, we've helped people create greater freedom, stronger confidence, and more time with the people they love. What started as a passion for helping others has grown into a community where encouragement, mentorship, and shared success are at the heart of everything we do. Because life's greatest rewards aren't achieved alone. They're built together.
             </p>
           </div>
 
